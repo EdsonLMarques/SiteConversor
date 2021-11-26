@@ -1,0 +1,66 @@
+{% extends 'base.html'%}
+{% load static %}   
+{% block content%} 
+
+{% include 'partials/_header.html'%}  
+
+<main class="main">
+    <!-- titulo --> 
+    <div class="title">
+        <h1>Convert Characters</h1>
+    </div>
+
+    <!-- conteudo --> 
+    <div class="conteudo_central">
+        <!-- menu lateral--> 
+        <div class="menu_lateral">
+            <h3>Opções</h3>
+            <ul class="menu_lateral_lista">
+                <li><a href="{% url 'characters' %}"> Characters</a></li>
+                <li><a href="{% url 'enconding' %}"> Enconding</a></li>
+                <li><a href="{% url 'chartoNumbers' %}"> Char to Numbers</a></li>
+            </ul>
+        </div>
+
+        <!-- central--> 
+        <div class="central">
+            <form method="POST" class="central_form">
+            {% csrf_token %}
+            {% if resposta %}
+                <div>
+                    <label for="text">Entre com seu texto aqui</label><br>
+                    <textarea type="text" name="text">{{ resposta }}</textarea>
+                </div>
+            {% else %}
+                <div>
+                    <label for="text"></label><br>
+                    <textarea type="text" name="text"></textarea>
+                </div>
+            {% endif %}
+                <div>
+                    <input type="submit" name="Capitalize" class="selecao_multipla" value="Capitalize">
+                    <input type="submit" name="Upper" class="selecao_multipla" value="Upper">
+                    <input type="submit" name="Lower" class="selecao_multipla" value="Lower">
+                    <input type="submit" name="Swapcase" class="selecao_multipla" value="Swapcase">
+                    <input type="submit" name="Title" class="selecao_multipla" value="Title">
+                </div>
+                    
+            </form>
+            {% comment %} <div>
+                {% if resposta %}
+                    <h1>Resposta: {{ resposta }} </h1>
+                {% else %}
+                    <h2>A resposta aparecera aqui</h2>
+                {% endif %}
+            </div> {% endcomment %}
+            {% comment %} <textarea class="conteudo_central_resposta" name="resposta" ></textarea> {% endcomment %}
+        </div>
+
+        <!-- propagandas--> 
+        <div class="propagandas">
+            propagandas
+        </div>
+    </div>
+</main>
+{% include 'partials/_footer.html' %}
+{% endblock %}
