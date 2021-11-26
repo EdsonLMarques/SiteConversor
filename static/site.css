@@ -1,0 +1,121 @@
+/* --------------------- HEADER --------------------- */
+.top_header{
+    height: 50px;
+    padding: 0 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    background-color: lightgray;
+}
+.top_header_2{
+    display: flex;
+    align-items: center;
+}
+.top_header_esquerda{
+    width: 50%;
+    text-align: left;
+}
+.top_header_direita{
+    justify-content: right;
+    display: flex;
+    width: 50%;
+    text-align: center;
+}
+.teste{
+    margin: 15px;
+}
+
+.nav_menu{
+    display: flex;
+    height: 55x;
+    padding: 5px;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    background-color: lightgray;
+}
+
+.lista_menu{
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+}
+
+.item_menu{
+    margin: 20px;
+    border: 1px dashed black;
+}
+/* --------------------- HEADER --------------------- */
+/* ---------------------- MAIN ---------------------- */
+.main{
+    margin: 15px;
+}
+/* TITULO */
+.title{
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+/* TITULO */
+/* MENU LATERAL */
+.menu_lateral{
+    width: 20%;
+    margin: 15px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    background-color: lightgray;
+}
+
+.menu_lateral h3{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.menu_lateral_lista{
+    font-size: 18px;
+    margin: 15px 10px;
+    padding-top: 10px;
+}
+/* MENU LATERAL */
+/* CONTEUDO CENTRAL */
+.menu_lateral_lista li{
+    margin-top: 10px;
+}
+
+.conteudo_central{
+    display: flex;
+}
+
+.central{
+    width: 55%;
+    padding: 15px;
+    justify-content: center;
+    text-align: center;
+}
+.central textarea{
+    width: 90%;
+    height: 150px;
+}
+
+.central input{
+    margin: 5px;
+}
+
+.conteudo_central_resposta{
+    width: 90%;
+    height: 150px;
+}
+
+.selecao_multipla{
+    display: flex;
+}
+/* PROPAGANDAS */
+.propagandas{
+    width: 25%;
+}
+/* PROPAGANDAS */
+/* ---------------------- MAIN ---------------------- */
